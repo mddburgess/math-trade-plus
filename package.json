@@ -4,7 +4,7 @@
   "private": true,
   "source": "src/index.html",
   "scripts": {
-    "build": "parcel build --no-cache",
+    "build": "parcel build --no-cache --public-url ./",
     "start": "parcel --no-cache"
   },
   "dependencies": {

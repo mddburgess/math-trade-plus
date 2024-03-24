@@ -4,19 +4,27 @@
   "private": true,
   "source": "src/index.html",
   "scripts": {
+    "antlr": "antlr -Dlanguage=TypeScript src/parser/Wants.g4",
     "build": "parcel build --no-cache --public-url ./",
-    "start": "parcel --no-cache"
+    "start": "parcel --no-cache",
+    "test": "jest"
   },
   "dependencies": {
+    "antlr4": "^4.13.1-patch-1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@types/react": "^18.2.59",
     "@types/react-dom": "^18.2.19",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
     "parcel": "^2.11.0",
     "parcel-reporter-static-files-copy": "^1.5.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2"
   },
   "browserslist": [
     "> 0.5%",

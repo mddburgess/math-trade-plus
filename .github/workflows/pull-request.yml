@@ -12,6 +12,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "21"
+      - name: Setup ANTLR
+        uses: StoneMoe/setup-antlr4@v4.13.1
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

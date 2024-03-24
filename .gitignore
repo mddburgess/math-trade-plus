@@ -1,4 +1,7 @@
 .idea/
 .parcel-cache/
+coverage/
 dist/
 node_modules/
+*.interp
+*.tokens

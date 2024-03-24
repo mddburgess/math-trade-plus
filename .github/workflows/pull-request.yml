@@ -5,9 +5,14 @@ on:
     branches:
       - develop
 
+permissions:
+  actions: read
+  checks: write
+  contents: read
+
 jobs:
   build:
-    name: Test
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,3 +34,10 @@ jobs:
         run: npm run antlr
       - name: Test
         run: npm test
+      - name: Report test results
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Tests
+          path: junit.xml
+          reporter: jest-junit
